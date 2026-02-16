@@ -1,9 +1,8 @@
-name: Deploy Vite site to GitHub Pages
+name: Deploy Vite to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch:
+    branches: ["master"]
 
 permissions:
   contents: read
@@ -11,11 +10,11 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "github-pages"
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     environment:
@@ -23,36 +22,29 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # 1️⃣ Récupérer le code
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      # 2️⃣ Installer Node
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      # 3️⃣ Installer les dépendances
       - name: Install dependencies
         run: npm ci
 
-      # 4️⃣ Build du projet Vite (créé /dist)
-      - name: Build project
+      - name: Build Vite
         run: npm run build
 
-      # 5️⃣ Configurer GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      # 6️⃣ Upload du dossier dist
-      - name: Upload artifact
+      - name: Upload dist folder
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
-      # 7️⃣ Déployer sur GitHub Pages
-      - name: Deploy to GitHub Pages
+      - name: Deploy site
         id: deployment
         uses: actions/deploy-pages@v4
