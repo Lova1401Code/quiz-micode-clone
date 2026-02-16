@@ -1,4 +1,5 @@
-export default {
-    base: "/quiz-micode-clone/"
-}
-.github/workflows/github-page.yml
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  base: "/quiz-micode-clone/",
+})
