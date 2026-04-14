@@ -9,6 +9,32 @@
   <body>
     <div id="app">
       <h1><span class="js">JS</span> Quiz</h1>
+      <div class="quiz-config">
+        <div class="config-group">
+          <label for="category">Catégorie:</label>
+          <select id="category">
+            <option value="">Toutes les catégories</option>
+          </select>
+        </div>
+        <div class="config-group">
+          <label for="difficulty">Difficulté:</label>
+          <select id="difficulty">
+            <option value="">Toutes les difficultés</option>
+            <option value="easy">Facile</option>
+            <option value="medium">Moyen</option>
+            <option value="hard">Difficile</option>
+          </select>
+        </div>
+        <div class="config-group">
+          <label for="amount">Nombre de questions:</label>
+          <select id="amount">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+      </div>
       <button id="start">Start the quiz</button>
     </div>
     <script type="module" src="/src/main.js"></script>

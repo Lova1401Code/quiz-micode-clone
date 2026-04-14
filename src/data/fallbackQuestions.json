@@ -1,0 +1,62 @@
+[
+  {
+    "category": "Science: Computers",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What does HTML stand for?",
+    "correct_answer": "Hyper Text Markup Language",
+    "incorrect_answers": [
+      "High Tech Modern Language",
+      "Home Tool Markup Language",
+      "Hyperlinks and Text Markup Language"
+    ]
+  },
+  {
+    "category": "Science: Computers",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What does CSS stand for?",
+    "correct_answer": "Cascading Style Sheets",
+    "incorrect_answers": [
+      "Computer Style Sheets",
+      "Creative Style Sheets",
+      "Colorful Style Sheets"
+    ]
+  },
+  {
+    "category": "Science: Computers",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What does JavaScript primarily add to a website?",
+    "correct_answer": "Interactivity",
+    "incorrect_answers": [
+      "Structure",
+      "Style",
+      "Content"
+    ]
+  },
+  {
+    "category": "Science: Computers",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which method is used to add an element to the end of an array in JavaScript?",
+    "correct_answer": "push()",
+    "incorrect_answers": [
+      "pop()",
+      "shift()",
+      "unshift()"
+    ]
+  },
+  {
+    "category": "Science: Computers",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the time complexity of binary search?",
+    "correct_answer": "O(log n)",
+    "incorrect_answers": [
+      "O(n)",
+      "O(n²)",
+      "O(1)"
+    ]
+  }
+]
